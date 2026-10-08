@@ -18,5 +18,8 @@ dataset = ["requests"]
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+esperanto_nlp = ["data/*.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
