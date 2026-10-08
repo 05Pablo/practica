@@ -1,4 +1,7 @@
 # practica
+
+[![Tests](https://github.com/05Pablo/practica/actions/workflows/tests.yml/badge.svg)](https://github.com/05Pablo/practica/actions/workflows/tests.yml)
+
 Practica final de la asignatura 'Minería de Textos'
 
 Clasificación de textos en Esperanto por temática: construcción del dataset,
