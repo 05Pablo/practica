@@ -84,5 +84,5 @@ def test_add_pipe(nlp):
         return doc
 
     nlp.add_pipe(mark_upper, "marker", before="stopwords")
-    assert nlp.pipe_names == ["marker", "stopwords"]
+    assert nlp.pipe_names == ["tagger", "lemmatizer", "marker", "stopwords"]
     assert nlp("hundo")[0].pos_ == "X"

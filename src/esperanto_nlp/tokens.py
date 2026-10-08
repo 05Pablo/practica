@@ -8,6 +8,19 @@ NUMBER_WORDS = {
 }
 
 
+class MorphAnalysis(dict):
+    """Rasgos morfológicos de un token, p. ej. {"Number": "Plur", "Case": "Acc"}.
+
+    Se muestra en formato Universal Dependencies: "Case=Acc|Number=Plur".
+    """
+
+    def to_dict(self):
+        return dict(self)
+
+    def __str__(self):
+        return "|".join(f"{key}={value}" for key, value in sorted(self.items()))
+
+
 class Token:
     """Una palabra, número o signo de puntuación dentro de un Doc."""
 
@@ -21,7 +34,7 @@ class Token:
         # Atributos que rellenan los componentes del pipeline.
         self.lemma_ = ""
         self.pos_ = ""
-        self.morph = {}
+        self.morph = MorphAnalysis()
         self.is_stop = False
 
     @property

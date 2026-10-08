@@ -36,14 +36,28 @@ pip install git+https://github.com/05Pablo/practica.git
 import esperanto_nlp
 
 nlp = esperanto_nlp.load()
-doc = nlp("Mi legas la Biblion. Ĉu vi?")
+doc = nlp("La judoj preĝas en la sinagogo. Ĉu vi?")
 
 for token in doc:
-    print(token.text, token.idx, token.is_stop, token.is_punct)
+    print(token.text, token.lemma_, token.pos_, token.morph, token.is_stop)
+# La        la        DET
+# judoj     judo      NOUN   Case=Nom|Number=Plur
+# preĝas    preĝi     VERB   Mood=Ind|Tense=Pres|VerbForm=Fin
+# ...
 
 for sent in doc.sents:
     print(sent.text)
 ```
+
+El pipeline (`nlp.pipe_names`) tiene tres componentes basados en reglas:
+
+| Componente | Asigna | Reglas |
+|---|---|---|
+| `tagger` | `pos_`, `morph` | Terminaciones (-o, -a, -e, -i, -as...), léxico cerrado de palabras funcionales y correlativos, contexto (DET/PRON, nombres propios) |
+| `lemmatizer` | `lemma_` | Elimina la flexión: plural, acusativo y tiempo verbal (`estis` → `esti`). No elimina la derivación (`konataj` → `konata`) |
+| `stopwords` | `is_stop` | Lista de stop-words aplicada a la forma y al lema |
+
+Las categorías siguen las etiquetas [Universal Dependencies](https://universaldependencies.org/u/pos/).
 
 La lista de stop-words parte de `vortoj.json` del repositorio
 [nlp-esperantilo](https://github.com/jparisu/nlp-esperantilo) (Apache-2.0) y se
