@@ -1,0 +1,1507 @@
+{
+  "lingvo": "eo",
+  "licenco": "Apache-2.0",
+  "fontoj": [
+    {
+      "id": "stopwords-iso",
+      "nomo": "stopwords-iso/stopwords-eo",
+      "url": "https://github.com/stopwords-iso/stopwords-eo",
+      "licenco": "MIT",
+      "noto": "The reference public list of Esperanto stop-words (173 words, no translations). Every word of that list is included here."
+    },
+    {
+      "id": "nlp-esperantilo",
+      "nomo": "NLP Esperantilo",
+      "url": "https://github.com/jparisu/nlp-esperantilo",
+      "licenco": "Apache-2.0",
+      "noto": "Words added by this project, mostly prepositions and correlatives missing from the reference list."
+    }
+  ],
+  "kategorioj": {
+    "artikolo": "Article",
+    "prepozicio": "Preposition",
+    "konjunkcio": "Conjunction",
+    "pronomo": "Pronoun",
+    "adverbo": "Adverb",
+    "partikulo": "Particle",
+    "verboformo": "Verb form",
+    "nombro": "Number",
+    "interjekcio": "Interjection",
+    "ĝentilaĵo": "Politeness word",
+    "titolo": "Title of address"
+  },
+  "vortoj": [
+    {
+      "vorto": "adiaŭ",
+      "kategorio": "ĝentilaĵo",
+      "traduko": [
+        "goodbye",
+        "farewell"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ajn",
+      "kategorio": "partikulo",
+      "traduko": [
+        "-ever",
+        "any"
+      ],
+      "noto": "Makes a correlative indefinite: *kiu ajn* = whoever.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "al",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "to",
+        "towards"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ankaŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "also",
+        "too"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ankoraŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "still",
+        "yet"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "anstataŭ",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "instead of"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "antaŭ",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "before",
+        "in front of"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "apenaŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "hardly",
+        "barely"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "apud",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "next to",
+        "beside"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "aŭ",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "or"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "baldaŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "soon"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "bona",
+      "kategorio": "ĝentilaĵo",
+      "traduko": [
+        "good"
+      ],
+      "noto": "A content adjective, listed only as the root of the greeting form *bonan* (*bonan tagon*).",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": false
+    },
+    {
+      "vorto": "bonvoli",
+      "kategorio": "ĝentilaĵo",
+      "traduko": [
+        "to be so kind as to",
+        "please"
+      ],
+      "noto": "Infinitive. The imperative *bonvolu* and the adverb *bonvole* are the usual forms.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "cent",
+      "kategorio": "nombro",
+      "traduko": [
+        "hundred"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ci",
+      "kategorio": "pronomo",
+      "traduko": [
+        "thou"
+      ],
+      "noto": "Archaic and rarely used; *vi* covers both singular and plural.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "da",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "of"
+      ],
+      "noto": "Used after words of quantity: *glaso da akvo*.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "de",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "of",
+        "from",
+        "by"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "dek",
+      "kategorio": "nombro",
+      "traduko": [
+        "ten"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "des",
+      "kategorio": "partikulo",
+      "traduko": [
+        "the"
+      ],
+      "noto": "Second half of the *ju ... des* construction.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "do",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "so",
+        "therefore"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "doktoro",
+      "kategorio": "titolo",
+      "traduko": [
+        "doctor"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "du",
+      "kategorio": "nombro",
+      "traduko": [
+        "two"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "dum",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "during",
+        "while"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "eble",
+      "kategorio": "adverbo",
+      "traduko": [
+        "perhaps",
+        "possibly"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ekster",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "outside"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ekzemple",
+      "kategorio": "adverbo",
+      "traduko": [
+        "for example"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "el",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "out of",
+        "from"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "en",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "in",
+        "into"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "esti",
+      "kategorio": "verboformo",
+      "traduko": [
+        "to be"
+      ],
+      "noto": "Infinitive.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "eĉ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "even"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "feliĉa",
+      "kategorio": "ĝentilaĵo",
+      "traduko": [
+        "happy"
+      ],
+      "noto": "A content adjective, listed only as the root of the greeting form *feliĉan* (*feliĉan naskiĝtagon*).",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": false
+    },
+    {
+      "vorto": "for",
+      "kategorio": "adverbo",
+      "traduko": [
+        "away",
+        "off"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "fraŭlo",
+      "kategorio": "titolo",
+      "traduko": [
+        "bachelor",
+        "young man"
+      ],
+      "noto": "Root of *fraŭlino* (miss), which adds the female suffix *-in-*.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ha",
+      "kategorio": "interjekcio",
+      "traduko": [
+        "ah"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "havi",
+      "kategorio": "verboformo",
+      "traduko": [
+        "to have"
+      ],
+      "noto": "Infinitive.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "he",
+      "kategorio": "interjekcio",
+      "traduko": [
+        "hey"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "hieraŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "yesterday"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ho",
+      "kategorio": "interjekcio",
+      "traduko": [
+        "oh"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "hodiaŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "today"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "hu",
+      "kategorio": "interjekcio",
+      "traduko": [
+        "ooh",
+        "boo"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ili",
+      "kategorio": "pronomo",
+      "traduko": [
+        "they"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "inter",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "between",
+        "among"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ja",
+      "kategorio": "partikulo",
+      "traduko": [
+        "indeed"
+      ],
+      "noto": "Emphasises the statement.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "jam",
+      "kategorio": "adverbo",
+      "traduko": [
+        "already"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "je",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "at"
+      ],
+      "noto": "The indefinite preposition, used when no other one fits.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "jen",
+      "kategorio": "partikulo",
+      "traduko": [
+        "here is",
+        "behold"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "jes",
+      "kategorio": "partikulo",
+      "traduko": [
+        "yes"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ju",
+      "kategorio": "partikulo",
+      "traduko": [
+        "the"
+      ],
+      "noto": "Used in *ju ... des* constructions: the more ... the more.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kaj",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "and"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ke",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "that"
+      ],
+      "noto": "Introduces a subordinate clause; not to be confused with *kiu*.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kontraŭ",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "against",
+        "opposite"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "krom",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "except",
+        "besides"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kun",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "with"
+      ],
+      "noto": "Accompaniment, as opposed to *per* (instrument).",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kvankam",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "although"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kvar",
+      "kategorio": "nombro",
+      "traduko": [
+        "four"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kvazaŭ",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "as if"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "kvin",
+      "kategorio": "nombro",
+      "traduko": [
+        "five"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "la",
+      "kategorio": "artikolo",
+      "traduko": [
+        "the"
+      ],
+      "noto": "The only article. Invariable: no plural, no accusative.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "laŭ",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "according to",
+        "along"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "li",
+      "kategorio": "pronomo",
+      "traduko": [
+        "he"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "male",
+      "kategorio": "adverbo",
+      "traduko": [
+        "on the contrary"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "malgraŭ",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "despite",
+        "in spite of"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "mem",
+      "kategorio": "pronomo",
+      "traduko": [
+        "self",
+        "-self"
+      ],
+      "noto": "Emphasises the preceding word: *mi mem* = I myself.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "mi",
+      "kategorio": "pronomo",
+      "traduko": [
+        "I"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "mil",
+      "kategorio": "nombro",
+      "traduko": [
+        "thousand"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "miliardo",
+      "kategorio": "nombro",
+      "traduko": [
+        "billion",
+        "milliard"
+      ],
+      "noto": "A noun, like `miliono`. 10^9.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": false
+    },
+    {
+      "vorto": "miliono",
+      "kategorio": "nombro",
+      "traduko": [
+        "million"
+      ],
+      "noto": "A noun, not a numeral: `du milionoj da homoj`.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": false
+    },
+    {
+      "vorto": "minus",
+      "kategorio": "nombro",
+      "traduko": [
+        "minus"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "morgaŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "tomorrow"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "naŭ",
+      "kategorio": "nombro",
+      "traduko": [
+        "nine"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ne",
+      "kategorio": "partikulo",
+      "traduko": [
+        "not",
+        "no"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "nek",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "nor",
+        "neither"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "nepre",
+      "kategorio": "adverbo",
+      "traduko": [
+        "definitely",
+        "without fail"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ni",
+      "kategorio": "pronomo",
+      "traduko": [
+        "we"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "nu",
+      "kategorio": "interjekcio",
+      "traduko": [
+        "well"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "nul",
+      "kategorio": "nombro",
+      "traduko": [
+        "zero"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "nun",
+      "kategorio": "adverbo",
+      "traduko": [
+        "now"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "nur",
+      "kategorio": "adverbo",
+      "traduko": [
+        "only"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ok",
+      "kategorio": "nombro",
+      "traduko": [
+        "eight"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ol",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "than"
+      ],
+      "noto": "Used with comparatives: *pli granda ol*.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "oni",
+      "kategorio": "pronomo",
+      "traduko": [
+        "one",
+        "people",
+        "they"
+      ],
+      "noto": "Impersonal pronoun.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "per",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "by means of",
+        "with"
+      ],
+      "noto": "Instrument, as opposed to *kun* (accompaniment).",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "plej",
+      "kategorio": "adverbo",
+      "traduko": [
+        "most"
+      ],
+      "noto": "Superlative marker.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "pli",
+      "kategorio": "adverbo",
+      "traduko": [
+        "more"
+      ],
+      "noto": "Comparative marker, used with *ol*.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "plu",
+      "kategorio": "adverbo",
+      "traduko": [
+        "further",
+        "any more"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "plus",
+      "kategorio": "nombro",
+      "traduko": [
+        "plus"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "po",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "at the rate of"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "por",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "for",
+        "in order to"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "post",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "after",
+        "behind"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "povi",
+      "kategorio": "verboformo",
+      "traduko": [
+        "to be able to",
+        "can"
+      ],
+      "noto": "Infinitive.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "preskaŭ",
+      "kategorio": "adverbo",
+      "traduko": [
+        "almost"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "preter",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "past",
+        "beyond"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "pri",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "about",
+        "concerning"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "pro",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "because of",
+        "due to"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "se",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "if"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "sed",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "but"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "sen",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "without"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "sep",
+      "kategorio": "nombro",
+      "traduko": [
+        "seven"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ses",
+      "kategorio": "nombro",
+      "traduko": [
+        "six"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "si",
+      "kategorio": "pronomo",
+      "traduko": [
+        "oneself"
+      ],
+      "noto": "Reflexive pronoun of the third person.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "sinjoro",
+      "kategorio": "titolo",
+      "traduko": [
+        "mister",
+        "sir"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "sub",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "under",
+        "below"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "super",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "above",
+        "over"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "supre",
+      "kategorio": "adverbo",
+      "traduko": [
+        "above",
+        "up"
+      ],
+      "noto": "*supren* (upwards) is this word plus the directional *-n*.",
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "sur",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "on",
+        "upon"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tamen",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "however",
+        "nevertheless"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tra",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "through"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "trans",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "across",
+        "beyond"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tre",
+      "kategorio": "adverbo",
+      "traduko": [
+        "very"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tri",
+      "kategorio": "nombro",
+      "traduko": [
+        "three"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tro",
+      "kategorio": "adverbo",
+      "traduko": [
+        "too",
+        "too much"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tuj",
+      "kategorio": "adverbo",
+      "traduko": [
+        "immediately",
+        "at once"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "tute",
+      "kategorio": "adverbo",
+      "traduko": [
+        "completely",
+        "entirely"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "unu",
+      "kategorio": "nombro",
+      "traduko": [
+        "one"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ve",
+      "kategorio": "interjekcio",
+      "traduko": [
+        "alas",
+        "woe"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "verŝajne",
+      "kategorio": "adverbo",
+      "traduko": [
+        "probably",
+        "apparently"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "vi",
+      "kategorio": "pronomo",
+      "traduko": [
+        "you"
+      ],
+      "noto": "Both singular and plural.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĉar",
+      "kategorio": "konjunkcio",
+      "traduko": [
+        "because"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĉe",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "at",
+        "by"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĉi",
+      "kategorio": "partikulo",
+      "traduko": [
+        "this",
+        "here"
+      ],
+      "noto": "Proximity particle: *tiu ĉi* = this one, *ĉi tie* = here.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĉirkaŭ",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "around",
+        "about"
+      ],
+      "fontoj": [
+        "nlp-esperantilo"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĉu",
+      "kategorio": "partikulo",
+      "traduko": [
+        "whether"
+      ],
+      "noto": "Turns a statement into a yes/no question.",
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĝi",
+      "kategorio": "pronomo",
+      "traduko": [
+        "it"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĝis",
+      "kategorio": "prepozicio",
+      "traduko": [
+        "until",
+        "up to"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ĵus",
+      "kategorio": "adverbo",
+      "traduko": [
+        "just now"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    },
+    {
+      "vorto": "ŝi",
+      "kategorio": "pronomo",
+      "traduko": [
+        "she"
+      ],
+      "fontoj": [
+        "stopwords-iso"
+      ],
+      "ignorinda": true
+    }
+  ]
+}
