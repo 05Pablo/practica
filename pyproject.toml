@@ -13,6 +13,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest"]
+dataset = ["requests"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
