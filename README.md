@@ -6,7 +6,7 @@ librería de NLP propia basada en reglas y cuaderno de clasificación.
 
 ## Temática
 
-Religiones del mundo (pendiente de validación por el profesor):
+Religiones del mundo:
 
 | Clase | Categoría de Wikipedia (eo) |
 |---|---|
