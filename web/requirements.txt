@@ -1,0 +1,4 @@
+# Dependencias para generar la web (scripts/build_web.py). Versiones fijadas para
+# que el modelo exportado sea reproducible.
+scikit-learn==1.9.1
+numpy==2.5.4

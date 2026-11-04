@@ -128,3 +128,35 @@ Conjunto de test: 20 % del dataset, estratificado, `random_state=42`.
   el rendimiento puede ser menor.
 - **Lematizador.** Elimina la flexión, no la derivación, por lo que formas derivadas del
   mismo radical cuentan como términos distintos.
+
+## Web del proyecto
+
+[`web/`](web/) contiene una web estática que se publica en GitHub Pages
+(`https://05pablo.github.io/practica/`) con el workflow
+[`pages.yml`](.github/workflows/pages.yml) en cada push a `main`. Incluye:
+
+- **Dataset**: párrafos por clase, longitudes y un explorador de párrafos.
+- **Librería**: demo interactiva de `esperanto_nlp` (tokens, lemas, POS, morfología,
+  stop-words y frases). La librería se ejecuta en el navegador con
+  [Pyodide](https://pyodide.org/), sin servidor.
+- **Clasificador**: clasifica texto libre o un artículo de Vikipedio descargado en vivo
+  con la API de MediaWiki, y muestra los términos que más pesan en la decisión.
+- **Resultados**: comparación de modelos, matrices de confusión, métricas por clase,
+  errores frecuentes y ejemplos de aciertos y fallos.
+
+[`scripts/build_web.py`](scripts/build_web.py) genera la web: empaqueta la librería,
+entrena los mismos modelos que el cuaderno (mismo preprocesado, partición y semilla) y
+exporta el modelo a JSON. En el navegador, [`web/py/web_demo.py`](web/py/web_demo.py)
+reproduce la predicción en Python puro; el script comprueba que da las mismas
+probabilidades que scikit-learn antes de publicar.
+
+Vista previa local:
+
+```bash
+pip install -e . -r web/requirements.txt
+python scripts/build_web.py
+python -m http.server -d _site 8000   # http://localhost:8000
+```
+
+Para otra temática basta con cambiar el dataset (`--dataset`) y los textos de
+[`web/site_config.json`](web/site_config.json).
