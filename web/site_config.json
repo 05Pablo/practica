@@ -3,7 +3,7 @@
   "subtitle": "Clasificación de textos en Esperanto por temática, con una librería de NLP propia basada en reglas.",
   "topic": "Religiones del mundo",
   "course": "Minería de Textos · 4º INF · CUNEF Universidad · 2026/2027",
-  "team": ["Pablo", "Alberto Olmos"],
+  "team": ["Pablo Gallego", "Alberto Olmos"],
   "repo": "https://github.com/05Pablo/practica",
   "colab": "https://colab.research.google.com/github/05Pablo/practica/blob/main/notebooks/clasificador.ipynb",
   "wikipedia_api": "https://eo.wikipedia.org/w/api.php",
