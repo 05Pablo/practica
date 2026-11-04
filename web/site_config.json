@@ -1,0 +1,28 @@
+{
+  "title": "Esperanto-NLP",
+  "subtitle": "Clasificación de textos en Esperanto por temática, con una librería de NLP propia basada en reglas.",
+  "topic": "Religiones del mundo",
+  "course": "Minería de Textos · 4º INF · CUNEF Universidad · 2026/2027",
+  "team": ["Pablo", "Alberto Olmos"],
+  "repo": "https://github.com/05Pablo/practica",
+  "colab": "https://colab.research.google.com/github/05Pablo/practica/blob/main/notebooks/clasificador.ipynb",
+  "wikipedia_api": "https://eo.wikipedia.org/w/api.php",
+  "classes": {
+    "islamo": {"label": "Islam", "source": "https://eo.wikipedia.org/wiki/Kategorio:Islamo"},
+    "judismo": {"label": "Judaísmo", "source": "https://eo.wikipedia.org/wiki/Kategorio:Judismo"},
+    "kristanismo": {"label": "Cristianismo", "source": "https://eo.wikipedia.org/wiki/Kategorio:Kristanismo"}
+  },
+  "library_examples": [
+    "La judoj preĝas en la sinagogo. Ĉu vi venos kun ni?",
+    "La apostoloj sekvis Jesuon kaj predikis la evangelion al ĉiuj popoloj.",
+    "Dum la monato Ramadano la islamanoj fastas de la sunleviĝo ĝis la sunsubiro.",
+    "Tiu ĉi libro estis verkita de Zamenhof en 1887."
+  ],
+  "classifier_examples": [
+    "La papo celebris la meson en la baziliko de Sankta Petro antaŭ miloj da kristanoj.",
+    "La rabeno legis la Toraon en la sinagogo dum la sabato.",
+    "La islamanoj preĝas kvin fojojn tage turnitaj al Mekko.",
+    "La profetoj de la Malnova Testamento estas respektataj de pluraj religioj."
+  ],
+  "wikipedia_examples": ["Ramadano", "Ĥanuko", "Kristnasko", "Pesaĥo", "Moskeo", "Katedralo", "Talmudo", "Hadito"]
+}

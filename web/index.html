@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esperanto-NLP</title>
+  <meta name="description" content="Clasificación de textos en Esperanto por temática con una librería de NLP propia basada en reglas.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23009b3a' d='M12 1.5l3.1 7.1 7.7.6-5.9 5 1.8 7.5L12 17.8l-6.7 3.9 1.8-7.5-5.9-5 7.7-.6z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#inicio">
+        <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l3.1 7.1 7.7.6-5.9 5 1.8 7.5L12 17.8l-6.7 3.9 1.8-7.5-5.9-5 7.7-.6z"/></svg>
+        <span data-bind="title">Esperanto-NLP</span>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#dataset">Dataset</a>
+        <a href="#libreria">Librería</a>
+        <a href="#clasificador">Clasificador</a>
+        <a href="#resultados">Resultados</a>
+      </nav>
+      <div class="topbar-right">
+        <span id="py-status" class="py-status" data-state="loading" title="Estado de Python en el navegador">
+          <span class="dot"></span><span class="py-status-text">Cargando Python…</span>
+        </span>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Cambiar tema claro/oscuro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section id="inicio" class="hero">
+      <div class="wrap">
+        <p class="eyebrow" data-bind="course"></p>
+        <h1>Clasificar textos en <span class="accent">Esperanto</span> por temática</h1>
+        <p class="lead" data-bind="subtitle"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#clasificador">Probar el clasificador</a>
+          <a class="btn" data-href="repo" target="_blank" rel="noopener">Código en GitHub</a>
+          <a class="btn" data-href="colab" target="_blank" rel="noopener">Abrir cuaderno en Colab</a>
+        </div>
+        <div id="hero-stats" class="stats"></div>
+      </div>
+    </section>
+
+    <!-- Pipeline -->
+    <section class="section">
+      <div class="wrap">
+        <h2>Cómo funciona</h2>
+        <p class="section-lead">Todo el sistema, de los datos a la predicción. Cada paso está en el repositorio.</p>
+        <ol class="pipeline">
+          <li><span class="step-n">1</span><h3>Datos</h3><p>Artículos de Vikipedio descargados con su API y divididos en párrafos.</p><code>scripts/build_dataset.py</code></li>
+          <li><span class="step-n">2</span><h3>Librería NLP</h3><p>Tokenizador, POS, lematizador y stop-words por reglas, sin spaCy ni NLTK.</p><code>esperanto_nlp</code></li>
+          <li><span class="step-n">3</span><h3>TF-IDF</h3><p>Cada párrafo se convierte en un vector de lemas ponderados.</p><code>TfidfVectorizer</code></li>
+          <li><span class="step-n">4</span><h3>Modelo</h3><p>Se comparan Naive Bayes, Complement NB y regresión logística.</p><code>scikit-learn</code></li>
+          <li><span class="step-n">5</span><h3>Web</h3><p>Se descargan páginas reales y se calcula la probabilidad de cada clase.</p><code>requests + bs4</code></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Dataset -->
+    <section id="dataset" class="section section-alt">
+      <div class="wrap">
+        <h2>Dataset</h2>
+        <p class="section-lead">Cada párrafo hereda la clase de la categoría de Vikipedio de su artículo. Formato: CSV UTF-8, separador <code>;</code>, columnas <code>text;class</code>.</p>
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title">Párrafos por clase</h3>
+            <div id="class-bars" class="hbars"></div>
+            <p class="note" id="imbalance-note"></p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Longitud de los párrafos <span class="muted">(nº de palabras)</span></h3>
+            <div class="legend" id="length-legend"></div>
+            <div id="length-hist" class="vbars"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Explora párrafos del dataset</h3>
+            <div class="seg" id="sample-tabs" role="tablist"></div>
+          </div>
+          <blockquote id="sample-text" class="sample" lang="eo"></blockquote>
+          <button id="sample-next" class="btn btn-small" type="button">Otro párrafo</button>
+        </div>
+        <div class="callout">
+          <strong>Ruido de etiquetas.</strong> Hay párrafos genéricos que no distinguen la clase
+          (p. ej. <em lang="eo">«Ĝi estis fondita en 1950»</em>), biografías o citas en otros idiomas.
+          El modelo falla en muchos de ellos, y parte de esos errores son de la etiqueta, no del modelo.
+        </div>
+      </div>
+    </section>
+
+    <!-- Librería -->
+    <section id="libreria" class="section">
+      <div class="wrap">
+        <h2>La librería <code class="h-code">esperanto_nlp</code></h2>
+        <p class="section-lead">API al estilo spaCy: <code>nlp = esperanto_nlp.load()</code>, <code>doc = nlp(texto)</code>. Escribe una frase y se analiza aquí mismo: la librería se ejecuta en tu navegador con Pyodide.</p>
+        <div class="card">
+          <label class="field-label" for="lib-input">Texto en Esperanto</label>
+          <textarea id="lib-input" rows="3" lang="eo" spellcheck="false"></textarea>
+          <div class="row">
+            <div class="chips" id="lib-examples"></div>
+            <label class="check"><input type="checkbox" id="lib-x"> Sistema x (<code>cx → ĉ</code>)</label>
+            <button id="lib-run" class="btn btn-primary" type="button" disabled>Analizar</button>
+          </div>
+        </div>
+        <div id="lib-output" class="lib-output" hidden>
+          <div class="card">
+            <h3 class="card-title">Texto anotado</h3>
+            <div id="lib-inline" class="inline-tokens" lang="eo"></div>
+            <div class="legend" id="pos-legend"></div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Tokens <span class="muted" id="lib-count"></span></h3>
+            <div class="table-wrap">
+              <table class="tokens-table">
+                <thead><tr><th>#</th><th>Token</th><th>Lema</th><th>POS</th><th>Morfología</th><th>Stop</th></tr></thead>
+                <tbody id="lib-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Frases <span class="muted">(<code>doc.sents</code>)</span></h3>
+            <ol id="lib-sents" class="sents" lang="eo"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clasificador -->
+    <section id="clasificador" class="section section-alt">
+      <div class="wrap">
+        <h2>Clasificador</h2>
+        <p class="section-lead">El modelo entrenado (TF-IDF + regresión logística) se ejecuta en el navegador sobre los lemas que produce nuestra librería.</p>
+        <div class="seg seg-lg" role="tablist" id="clf-tabs">
+          <button type="button" role="tab" aria-selected="true" data-tab="text">Texto libre</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="wiki">Artículo de Vikipedio</button>
+        </div>
+
+        <div class="card" data-panel="text">
+          <label class="field-label" for="clf-input">Párrafo en Esperanto</label>
+          <textarea id="clf-input" rows="4" lang="eo" spellcheck="false"></textarea>
+          <div class="row">
+            <div class="chips" id="clf-examples"></div>
+            <button id="clf-run" class="btn btn-primary" type="button" disabled>Clasificar</button>
+          </div>
+        </div>
+
+        <div class="card" data-panel="wiki" hidden>
+          <label class="field-label" for="wiki-input">Título del artículo en eo.wikipedia.org</label>
+          <div class="row row-tight">
+            <input id="wiki-input" type="text" lang="eo" placeholder="p. ej. Ramadano" autocomplete="off">
+            <button id="wiki-run" class="btn btn-primary" type="button" disabled>Descargar y clasificar</button>
+          </div>
+          <div class="chips" id="wiki-examples"></div>
+          <p class="note">Se descarga el texto con la API de MediaWiki, se divide en párrafos (≥ 15 palabras) y se promedian las probabilidades, igual que en el cuaderno.</p>
+        </div>
+
+        <div id="clf-output" class="clf-output" hidden aria-live="polite">
+          <div class="card">
+            <div class="card-head">
+              <h3 class="card-title" id="clf-title">Resultado</h3>
+              <span id="clf-badge" class="badge"></span>
+            </div>
+            <div id="clf-bars" class="hbars"></div>
+            <p class="note" id="clf-meta"></p>
+          </div>
+          <div class="card" id="clf-terms-card">
+            <h3 class="card-title">Términos que más pesan en la decisión</h3>
+            <div id="clf-terms" class="term-list"></div>
+          </div>
+          <div class="card" id="clf-paras-card" hidden>
+            <h3 class="card-title">Párrafo a párrafo</h3>
+            <div id="clf-paras" class="paras"></div>
+          </div>
+        </div>
+        <p id="clf-error" class="error" hidden></p>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section id="resultados" class="section">
+      <div class="wrap">
+        <h2>Resultados del modelo</h2>
+        <p class="section-lead" id="split-note"></p>
+        <div class="card">
+          <h3 class="card-title">Comparación de modelos</h3>
+          <div class="legend" id="metric-legend"></div>
+          <div id="model-compare" class="compare"></div>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Matriz de confusión <span class="muted">(filas: clase real · columnas: predicha)</span></h3>
+            <div class="seg" id="cm-tabs" role="tablist"></div>
+          </div>
+          <div id="cm" class="cm"></div>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title">Métricas por clase <span class="muted" id="report-model"></span></h3>
+            <div class="table-wrap">
+              <table class="report-table" id="report-table"></table>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Errores más frecuentes</h3>
+            <div id="error-pairs" class="hbars"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Términos más característicos de cada clase</h3>
+          <div id="top-terms" class="top-terms"></div>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Ejemplos del conjunto de test</h3>
+            <div class="seg" id="ex-tabs" role="tablist">
+              <button type="button" role="tab" aria-selected="true" data-ex="correct">Aciertos</button>
+              <button type="button" role="tab" aria-selected="false" data-ex="wrong">Errores</button>
+            </div>
+          </div>
+          <div id="examples" class="examples"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong data-bind="title"></strong> · <span data-bind="topic"></span><br>
+        <span class="muted" id="team"></span>
+      </div>
+      <div class="muted">
+        Librería <code id="lib-version"></code> · Licencia Apache-2.0 ·
+        <a data-href="repo" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
