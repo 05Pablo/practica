@@ -1,6 +1,9 @@
 # practica
 
 [![Tests](https://github.com/05Pablo/practica/actions/workflows/tests.yml/badge.svg)](https://github.com/05Pablo/practica/actions/workflows/tests.yml)
+[![Web](https://img.shields.io/badge/Web-demo%20interactiva-00873a)](https://05pablo.github.io/practica/)
+
+**🌐 Web del proyecto: [05pablo.github.io/practica](https://05pablo.github.io/practica/)**
 
 Practica final de la asignatura 'Minería de Textos'
 
