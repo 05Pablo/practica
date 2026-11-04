@@ -20,12 +20,42 @@ Religiones del mundo:
 | `islamo` | [Kategorio:Islamo](https://eo.wikipedia.org/wiki/Kategorio:Islamo) |
 | `judismo` | [Kategorio:Judismo](https://eo.wikipedia.org/wiki/Kategorio:Judismo) |
 
+## Ruido de etiquetas del dataset
+
+Cada párrafo hereda la clase de la categoría de su artículo, así que hay párrafos
+cuya etiqueta no se puede deducir del texto. [`scripts/measure_noise.py`](scripts/measure_noise.py)
+lo estima con tres medidas independientes:
+
+| Medida | Cómo se calcula | Párrafos |
+|---|---|---|
+| **Otro idioma** | ≥ 30 % de las palabras (sin contar nombres propios) con POS `X`: nuestro etiquetador no les reconoce terminación de Esperanto | 113 (2,4 %) |
+| **Sin términos de su clase** | No contiene ningún término característico de su clase (aparece en ≥ 5 párrafos y ≥ 80 % de su frecuencia relativa es de esa clase). No usa ningún modelo | 626 (13,2 %) |
+| **Error persistente** | TF-IDF + regresión logística lo falla en las 5 repeticiones de una validación cruzada de 5 folds | 364 (7,7 %) |
+| Error persistente + otra señal | Los casos más claros de etiqueta ruidosa | 193 (4,1 %) |
+| Alguna de las tres | Cota superior del ruido | 887 (18,8 %) |
+
+Por clase, `judismo` es la más ruidosa (21,8 % con alguna señal): tiene muchas
+biografías de personas judías y citas en otros idiomas. Los errores persistentes van
+sobre todo entre `judismo` y `kristanismo` (113 y 91 párrafos), que comparten
+vocabulario bíblico. Por tanto, entre el 4 % y el 19 % del dataset tiene una etiqueta
+dudosa, lo que pone un techo al accuracy alcanzable (el modelo obtiene 0,895).
+
+Las medidas son estimaciones: el detector de idioma falla con textos en latín (sus
+terminaciones se parecen a las del Esperanto) y marca alguna biografía con muchos
+nombres en alfabeto árabe.
+
+```bash
+pip install -e ".[analysis]"
+python scripts/measure_noise.py                  # resumen y ejemplos
+python scripts/measure_noise.py --out noise.csv  # detalle por párrafo
+```
+
 ## Estructura
 
 ```
 src/esperanto_nlp/   Librería de NLP (Fase 2)
 tests/               Pruebas unitarias (pytest)
-scripts/             Script de construcción del dataset (Fase 1)
+scripts/             Construcción del dataset, medida del ruido y generación de la web
 data/                Dataset (CSV UTF-8, separador ;, columnas text;class)
 notebooks/           Cuaderno de entrenamiento y clasificación (Fase 3)
 ```
